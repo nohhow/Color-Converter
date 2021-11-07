@@ -15,7 +15,8 @@ inputCode.addEventListener("keydown", function(){
 var conversionResult = document.querySelector(".conversion-result");
 var codeForm = document.getElementById("codeForm");  //form 객체
 
-var bodyElement = document.querySelector("body");
+// color preview
+var colorPreview = document.querySelector(".color-preview");
 
 function goConvert(){
   var target = codeForm.elements[0].value;
@@ -68,5 +69,6 @@ function goConvert(){
 
     conversionResult.innerText= "#" + rgb.join( "" );
   }
-  bodyElement.style.backgroundColor = conversionResult.innerText;
+  //출력값으로 배경색 지정
+  colorPreview.style.backgroundColor = conversionResult.innerText;
 }
