@@ -3,6 +3,14 @@ formSubmitButton.addEventListener("click", function(){
   goConvert();
 });
 
+var inputCode = document.querySelector("#inputHexCode");
+
+inputCode.addEventListener("keydown", function(){
+  if (window.event.keyCode == 13) {
+    goConvert();
+  }
+});
+
 
 var conversionResult = document.querySelector(".conversion-result");
 var codeForm = document.getElementById("codeForm");  //form 객체
