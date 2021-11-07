@@ -3,8 +3,8 @@ formSubmitButton.addEventListener("click", function(){
   goConvert();
 });
 
+// Input 에서 EnterKey Event Setting
 var inputCode = document.querySelector("#inputHexCode");
-
 inputCode.addEventListener("keydown", function(){
   if (window.event.keyCode == 13) {
     goConvert();
@@ -15,6 +15,7 @@ inputCode.addEventListener("keydown", function(){
 var conversionResult = document.querySelector(".conversion-result");
 var codeForm = document.getElementById("codeForm");  //form 객체
 
+var bodyElement = document.querySelector("body");
 
 function goConvert(){
   var target = codeForm.elements[0].value;
@@ -45,6 +46,7 @@ function goConvert(){
     // 결과 표시
     conversionResult.innerText="rgb(" + rgb.join(", ") + ")";
   }
+  // 만약 타겟이 RGB TYPE이라면
   else{
     /*
     ** 컬러값과 쉼표만 남기고 삭제하기.
@@ -65,10 +67,6 @@ function goConvert(){
     });
 
     conversionResult.innerText= "#" + rgb.join( "" );
-
   }
-
-
-
-
+  bodyElement.style.backgroundColor = conversionResult.innerText;
 }

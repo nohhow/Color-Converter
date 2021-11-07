@@ -15,13 +15,14 @@
     <h1>Color Converter</h1>
 
     <!-- Code Form -->
-    <form id = "codeForm" onsubmit="return false">
+    <form id = "codeForm">
       <div class="mb-3">
         <label for="inputHexCode" class="form-label">Hex / RGB</label>
         <input type="text" class="form-control" id="inputHexCode" aria-describedby="hexCodeHelp">
+        <input type="text" style="display:none">
         <div id="hexCodeHelp" class="form-text">#FFFFFF 또는 0,0,0</div>
       </div>
-      <button type="button" class="btn btn-primary">Convert</button>
+      <button type="button" class="btn btn-dark">Convert</button>
     </form>
 
     <!--  Conversion result -->
